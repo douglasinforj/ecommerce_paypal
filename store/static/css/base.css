@@ -1,0 +1,21 @@
+
+
+/* Reset CSS Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%; /* Usa a largura total do elemento pai */
+    max-width: 1140px; /* Define o limite máximo de largura */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 0 15px; /* Adiciona espaçamento lateral */
+    box-sizing: border-box; /* Inclui o padding no cálculo da largura */
+}
+
+body{
+    font-family: 'arial';
+}
+
