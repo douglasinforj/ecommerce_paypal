@@ -10,7 +10,9 @@
             
         </nav>
         <div class="nav-icon-container">
-            <img src="{% static 'image/cart.png' %}" alt="cart"/>
+            <a href="{% url 'cart' %}">
+                <img  src="{% static 'image/cart.png' %}" alt="cart"/>
+            </a>
             <p id="cart-total">0</p>
             <img src="{% static 'image/menu.png'  %}" alt="menu" class="menu-button"/>
         </div>
