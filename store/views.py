@@ -14,12 +14,16 @@ def cart(request):
         customer = request.user.customer
         order, created = Order.objects.get_or_create(customer=customer, complete=False)
         items = order.orderitem_set.all()
+        
     else:
         #criando carrinho vazio, para usuário não LOGADO, pois o nosso model vai dar um loop nos itens e precisamos passar algo []
-        item = []
-        
+        items = []
+        order = None
+
     #passsando itens consultado pelo contexto para o template
-    context = {'items':items}   
+    context = {
+        'items':items,
+        }
     return render(request, 'store/cart.html', context)
 
 def checkout(request):
