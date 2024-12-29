@@ -176,6 +176,8 @@ hr {
 /*--------------------------Fim cart-----------------------------------------------*/
 
 
+/*---------------------------Checkout cart---------------------------------------------*/
+
 /* Estilo do botão de continuar comprando */
 .btn-outline-dark {
     display: inline-block;
@@ -191,10 +193,6 @@ hr {
     background-color: #333;
     color: #fff;
 }
-
-
-
-
 
 
 /* Estilo da tabela */
@@ -224,5 +222,107 @@ hr {
 .btn-success:hover {
     background-color: #218838;
     transform: scale(1.05);
+}
+
+/*---------------------------------Fim checkout cart---------------------------*/
+
+
+/*------------------------------Checkout templates------------------------------*/
+
+/* Estilos principais do layout */
+.row-checkout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.col-lg-6 {
+    flex: 1 1 45%;
+    max-width: 45%;
+}
+
+.box-element-checkout {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Estilos do formulário */
+#form-wrapper {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.form-field {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.form-control:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#form-button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#form-button:hover {
+    background-color: #218838;
+}
+
+h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+h5 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Estilo do resumo do pedido */
+.cart-row-summary {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+.cart-row-summary div {
+    text-align: center;
+}
+
+.row-image-summary {
+    max-width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+.hr-summary{
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
+}
+
+/*ocultando forma de pagamento*/
+.hidden {
+    display: none;
 }
 
