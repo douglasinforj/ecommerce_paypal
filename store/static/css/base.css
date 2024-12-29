@@ -127,13 +127,7 @@ hr {
 
 /*----------------------------cart-----------------------------------------------*/
 
-.box.-element-cart{
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 10px 0;
-    background-color: #f9f9f9;
-}
+
 
 .cart-row {
     display: flex;
@@ -180,3 +174,55 @@ hr {
 
 
 /*--------------------------Fim cart-----------------------------------------------*/
+
+
+/* Estilo do botão de continuar comprando */
+.btn-outline-dark {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #333;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-dark:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+
+
+
+
+
+/* Estilo da tabela */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table th {
+    text-align: left;
+    padding: 10px;
+}
+
+/* Estilo do botão de checkout */
+.btn-success {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #28a745;
+    border: 1px solid #28a745;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
