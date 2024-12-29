@@ -4,8 +4,12 @@
         <h1 class="logo"><a href="{% url 'store' %}">ITPRO<span>LOJA</span></a></h1>
         <nav>
             <ul>
-                <li>Home</li>
-                <li>Produtos</li>
+                <a href="{% url 'store' %}">
+                    <li>Home</li>
+                </a>
+                <a href="{% url 'store' %}">
+                    <li>Produtos</li>
+                </a>
             </ul>
             
         </nav>
