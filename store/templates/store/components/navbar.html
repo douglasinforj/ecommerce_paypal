@@ -1,18 +1,18 @@
+{% load static %}
 <div class="nav-bar show-menu">
     <div class="header-inner-content">
         <h1 class="logo"><a href="{% url 'store' %}">ITPRO<span>LOJA</span></a></h1>
         <nav>
             <ul>
+                <li>Home</li>
                 <li>Produtos</li>
             </ul>
-            <div>
-                <a href="#">Login</a>
-                <a href="{ url 'cart' }">
-                    <img src="assets/cart.png" alt="cart"/>
-                <img src="assets/menu.png" alt="menu" class="menu-button"/>
-                <p id="cart-total">0</p>
-                </a>
-            </div>
+            
         </nav>
+        <div class="nav-icon-container">
+            <img src="{% static 'image/cart.png' %}" alt="cart"/>
+            <p id="cart-total">0</p>
+            <img src="image/menu.png" alt="menu" class="menu-button"/>
+        </div>
     </div>
 </div>
