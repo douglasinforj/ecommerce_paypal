@@ -18,12 +18,11 @@ def cart(request):
     else:
         #criando carrinho vazio, para usuário não LOGADO, pois o nosso model vai dar um loop nos itens e precisamos passar algo []
         items = []
-        order = None
+        #carrinho do usuário não logado, precisamos passar algo para no model consultar e esta zerado
+        order = {'get_cart_total':0, 'get_cart_items':0}
 
     #passsando itens consultado pelo contexto para o template
-    context = {
-        'items':items,
-        }
+    context = {'items':items,'order': order}
     return render(request, 'store/cart.html', context)
 
 def checkout(request):
