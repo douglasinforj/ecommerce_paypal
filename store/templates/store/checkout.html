@@ -66,4 +66,29 @@
         </div>
     </div>
 </div>
+
+<!--Caso o produto seja digital não vai precisar de envio, criando script de ocultamento do formulário-->
+<script type="text/javascript">
+    var shipping = '{{order.shipping}}'
+
+    if (shipping == 'False'){
+        document.getElementById('shipping-info').innerHTML = ''
+    }
+
+    //O produto sendo fisico, passará pelo formulário, após isso clica no botão continuar, passará para botão opções de pagamento que esta em oculto no template
+    //<div class="box-element hidden" id="payment-info">
+    //Ocultando o botãop e mostrando opções de pagamento
+    var form = document.getElementById('form')
+    form.addEventListener('submit', function(e){
+        e.preventDefault()   //evita comportamento padrões da pagina
+        console.log('Formulário enviado....')
+        document.getElementById('form-button').classList.add("hidden");
+        document.getElementById('payment-info').classList.remove("hidden")
+    })
+    
+
+
+</script>
+
+
 {% endblock content%}
