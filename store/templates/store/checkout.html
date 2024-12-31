@@ -1,6 +1,11 @@
 {% extends 'store/base.html' %}
 {% load static %}
+
+<!--TODO: Adicionar <title>{% block title %}Título Padrão{% endblock %}</title>  -->
+
 {% block content %}
+
+
 
 <br>
 <div class="row-checkout">
@@ -32,9 +37,7 @@
                     <div class="form-field">
                         <input class="form-control" type="text" name="zipcode" placeholder="Zip code..">
                     </div>
-                    <div class="form-field">
-                        <input class="form-control" type="text" name="country" placeholder="Zip code..">
-                    </div>
+                    
                 </div>
 
                 <hr>
@@ -44,7 +47,8 @@
 
         <br>
         <div class="box-element hidden" id="payment-info">
-            <small>Paypal Options</small>
+            <small>Paypal Options</small><!--TODO:mudar o nome do campo-->
+            <button id="make-payment">Efetuar o pagamento</button>
         </div>
         
     </div>
