@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import *
 
 from django.http import JsonResponse
+import json
 
 def store(request):
     products = Product.objects.all()
@@ -33,5 +34,14 @@ def checkout(request):
 
 
 #view para updateItem, quando clicarmos no botão adicionar ao carrinho, enviaremos o id do produto junto com a ação de adicionar ou remover
-def updateItem(reques):
+def updateItem(request):
+
+    data = json.loads(request.body)   #recebendo od dados de data, vindos da função (updateUserOrder) javascript
+    #separando os dados:
+    productId = data['productId']
+    action = data['action']
+    print('Action:', action)
+    print('Product:', productId)
+    
+    
     return JsonResponse('Item Foi Adicionado', safe=False)
