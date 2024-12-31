@@ -73,11 +73,21 @@
 
 <!--Caso o produto seja digital não vai precisar de envio, criando script de ocultamento do formulário-->
 <script type="text/javascript">
+
+    //Vindo de model a verificação se o produto é fisico ou virtual
     var shipping = '{{order.shipping}}'
 
+    //se for false é fisico, mostra o formulario de envio
     if (shipping == 'False'){
         document.getElementById('shipping-info').innerHTML = ''
     }
+
+    //Usuário logado ocultar "nome" e "email" do formulário
+    if (user != 'AnonymousUser'){
+        document.getElementById('user-info').innerHTML = ''
+    }
+
+
 
     //O produto sendo fisico, passará pelo formulário, após isso clica no botão continuar, passará para botão opções de pagamento que esta em oculto no template
     //<div class="box-element hidden" id="payment-info">
