@@ -32,6 +32,6 @@ def checkout(request):
     return render(request, 'store/checkout.html', context)
 
 
-#view para updateItem, quando clicarmos no botão adicionar ao carrinho, evniaremos o id do produto junto com a ação de adicionar ou remover
+#view para updateItem, quando clicarmos no botão adicionar ao carrinho, enviaremos o id do produto junto com a ação de adicionar ou remover
 def updateItem(reques):
     return JsonResponse('Item Foi Adicionado', safe=False)
