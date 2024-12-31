@@ -77,6 +77,9 @@
     //Vindo de model a verificação se o produto é fisico ou virtual
     var shipping = '{{order.shipping}}'
 
+    //consultando total do carrinho no objeto order
+    var total = '{{order.get_cart_total|floatformat:2}}'
+
     //se for false é fisico, mostra o formulario de envio
     if (shipping == 'False'){
         document.getElementById('shipping-info').innerHTML = ''
