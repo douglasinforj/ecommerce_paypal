@@ -25,6 +25,7 @@ var updateBtns = document.getElementsByClassName('update-cart')
         method: 'POST',
         headers:{
             'Content-Type': 'application/json',
+            'X-CSRFToken': csrftoken,
         },
         body:JSON.stringify({'productId':productId, 'action':action})
     })
@@ -33,5 +34,6 @@ var updateBtns = document.getElementsByClassName('update-cart')
     })
     .then((data)=>{
         console.log('Data:',data)
-    })
+        location.reload()
+    });
  }
