@@ -11,7 +11,7 @@ var updateBtns = document.getElementsByClassName('update-cart')
         if (user == 'AnonymousUser'){
             console.log('Usuário não autenticado')
         }else{
-            console.log('Usuário esta autenticado, enviar dados para o banco')
+            updateUserOrder(productId, action)     //adicionadno a função responsável por fazer as requissições POST a view updateItem
         }
     })
  }
