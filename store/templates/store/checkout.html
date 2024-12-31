@@ -132,6 +132,15 @@
             'zipcode':null,
         }
 
+        //Definindo valores para os atributos criados para o envio ao backend, vindo do template
+
+        if (shipping != 'False'){
+            shippingInfo.address = form.address.value,
+            shippingInfo.city = form.city.value,
+            shippingInfo.state = form.state.value,
+            shippingInfo.zipcode = form.zipcode.value,
+        }
+
     }
 
     
