@@ -17,7 +17,7 @@
             <a href="{% url 'cart' %}">
                 <img  src="{% static 'image/cart.png' %}" alt="cart"/>
             </a>
-            <p id="cart-total">0</p>
+            <p id="cart-total">{{cartItems}}</p>
             <img src="{% static 'image/menu.png'  %}" alt="menu" class="menu-button"/>
         </div>
     </div>
