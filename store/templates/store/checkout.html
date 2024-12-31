@@ -138,8 +138,18 @@
             shippingInfo.address = form.address.value,
             shippingInfo.city = form.city.value,
             shippingInfo.state = form.state.value,
-            shippingInfo.zipcode = form.zipcode.value,
+            shippingInfo.zipcode = form.zipcode.value
         }
+        //Se o usuário não logado, envia nome e email no formulário de envio
+        if (user == 'AnonymousUser'){
+            userFormData.name = form.name.value
+            userFormData.email = form.email.value
+        }
+
+        //verificando se os dados estão sendo capturados e enviados
+        console.log('Shipping Info:', shippingInfo)
+        console.log('User Info', userFormData)
+
 
     }
 
