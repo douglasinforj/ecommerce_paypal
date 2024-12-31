@@ -87,6 +87,15 @@
         document.getElementById('user-info').innerHTML = ''
     }
 
+    //Se o produto for virtual(shipping=True) & usuário conectado(logado), oculta o formuário e abri opções de pagamento.
+    if (shipping == 'False' && user != 'AnonymousUser')
+        //Ocultar formulário inteiro se o usuário estiver logado e o envio for falso
+        document.getElementById('form-wrapper').classList.add("hidden");
+
+        //Mostrar pagamento se o usuário logado quiser comprar um item que não requer frete
+        document.getElementById('payment-info').classList.remove("hidden");
+
+
 
 
     //O produto sendo fisico, passará pelo formulário, após isso clica no botão continuar, passará para botão opções de pagamento que esta em oculto no template
