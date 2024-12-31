@@ -14,7 +14,7 @@ def store(request):
         
     else:
         items = []
-        order = {'get_cart_total':0, 'get_cart_items':0}
+        order = {'get_cart_total':0, 'get_cart_items':0, 'shipping':False}
         cartItems = order['get_cart_items']
         
 
@@ -36,7 +36,7 @@ def cart(request):
         #criando carrinho vazio, para usuário não LOGADO, pois o nosso model vai dar um loop nos itens e precisamos passar algo []
         items = []
         #carrinho do usuário não logado, precisamos passar algo para no model consultar e esta zerado
-        order = {'get_cart_total':0, 'get_cart_items':0}
+        order = {'get_cart_total':0, 'get_cart_items':0, 'shipping':False}
         cartItems = order['get_cart_items']
 
     #passsando itens consultado pelo contexto para o template
