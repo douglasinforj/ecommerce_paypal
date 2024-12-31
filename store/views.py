@@ -97,4 +97,4 @@ def updateItem(request):
 
 #Processando Pedidos
 def processOrder(request):
-    return JsonResponse('Pagamento Enviado....')
+    return JsonResponse('Pagamento Enviado....',safe=False)
