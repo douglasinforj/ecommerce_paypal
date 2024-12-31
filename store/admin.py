@@ -17,7 +17,7 @@ class ProductAdmin(admin.ModelAdmin):
 
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ('id', 'customer', 'date_ordered', 'complete', 'tansaction_id')
+    list_display = ('id', 'customer', 'date_ordered', 'complete', 'transaction_id')
     list_filter = ('complete', 'date_ordered')
     search_fields = ('customer__name', 'tansaction_id')
     date_hierarchy = 'date_ordered'
