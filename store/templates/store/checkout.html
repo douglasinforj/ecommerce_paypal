@@ -153,6 +153,25 @@
         console.log('User Info', userFormData)
 
 
+        //Criando a chamada POST para enviar os dados para o backend
+        var url = "/process_order/"
+        fetch(url, {
+            method: 'POST',
+            headers:{
+                'Content-Type':'application/json',
+                'X-CSRFToken':csrftoken,
+            },
+            body:JSON.stringify({'form':userFormData, 'shipping':shippingInfo})  //passando os objetos criados
+        })
+        .then((response)=> response.json())
+        .then((data)=>{
+            console.log('Success', data);
+            alert('Transação Concluida');
+            window.location.href = "{% url 'store' %}"
+        })
+
+
+
     }
 
     
