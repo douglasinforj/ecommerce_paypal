@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import *
 
+from django.http import JsonResponse
+
 def store(request):
     products = Product.objects.all()
     context = {'products': products}
@@ -28,3 +30,8 @@ def cart(request):
 def checkout(request):
     context = {}
     return render(request, 'store/checkout.html', context)
+
+
+#view para updateItem, quando clicarmos no botão adicionar ao carrinho, evniaremos o id do produto junto com a ação de adicionar ou remover
+def updateItem(reques):
+    return JsonResponse('Item Foi Adicionado', safe=False)
